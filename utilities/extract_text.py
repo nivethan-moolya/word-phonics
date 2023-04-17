@@ -34,7 +34,7 @@ def tellMeThisImage(fileLocation):
     # of the rectangle to be detected.
     # A smaller value like (10, 10) will detect
     # each word instead of a sentence.
-    rect_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (18, 18))
+    rect_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (100, 100))
     
     # Applying dilation on the threshold image
     dilation = cv2.dilate(thresh1, rect_kernel, iterations = 1)
@@ -66,9 +66,9 @@ def tellMeThisImage(fileLocation):
     # make a request to google to get synthesis  
     t1 = gtts.gTTS(finalText)  
     # save the audio file  
-    t1.save("playme.mp3")   
+    t1.save("outputAudio/playme.mp3")   
     # play the audio file  
-    playsound("playme.mp3")  
+    playsound("outputAudio/playme.mp3")  
 
 #tellMeThisImage('/Users/admin/Learn/Learn2023/weekends/imageread/ReadThisImage.jpg')
 tellMeThisImage(sys.argv[1])

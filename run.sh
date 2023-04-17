@@ -1,1 +1,1 @@
-python extract_text.py $1
+python utilities/extract_text.py $1
