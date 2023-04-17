@@ -1,0 +1,4 @@
+brew install tesseract
+pip install opencv-python opencv-python-headless
+pip install gTTS
+pip install playsound
